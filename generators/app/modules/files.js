@@ -71,16 +71,21 @@ module.exports = function files() {
     this.destinationPath(`src/${this.props.bannerName}-300x250/styles/base/_banner.scss`),
     props
   );
-  this.fs.copyTpl(
-    this.templatePath('src/300x250/styles/base/preloader.scss'),
-    this.destinationPath(`src/${this.props.bannerName}-300x250/styles/base/_preloader.scss`),
-    props
-  );
+  // this.fs.copyTpl(
+  //   this.templatePath('src/300x250/styles/base/preloader.scss'),
+  //   this.destinationPath(`src/${this.props.bannerName}-300x250/styles/base/_preloader.scss`),
+  //   props
+  // );
 
   // Process the js files
   this.fs.copy(
     this.templatePath('src/base/js/main.js'),
     this.destinationPath('src/base/js/main.js')
+  );
+  // Added anim panel
+  this.fs.copy(
+    this.templatePath('src/base/js/anim_panel.js'),
+    this.destinationPath('src/base/js/anim_panel.js')
   );
   if (this.props.bannerType === 'Sizmek') {
     this.fs.copy(
@@ -88,20 +93,20 @@ module.exports = function files() {
       this.destinationPath(`src/${this.props.bannerName}-300x250/js/EBLoader.js`)
     );
   }
-  if (this.props.bannerType === 'Adform') {
-    this.fs.copy(
-      this.templatePath('src/300x250/js/libs/AdformDHTML.js'),
-      this.destinationPath(`src/${this.props.bannerName}-300x250/js/AdformDHTML.js`)
-    );
-  }
-  this.fs.copy(
-    this.templatePath('src/300x250/js/banner.js'),
-    this.destinationPath(`src/${this.props.bannerName}-300x250/js/banner.js`)
-  );
-  this.fs.copy(
-    this.templatePath(`src/300x250/js/loader.${this.bannerSuffix}.js`),
-    this.destinationPath(`src/${this.props.bannerName}-300x250/js/banner.loader.js`)
-  );
+  // if (this.props.bannerType === 'Adform') {
+  //   this.fs.copy(
+  //     this.templatePath('src/300x250/js/libs/AdformDHTML.js'),
+  //     this.destinationPath(`src/${this.props.bannerName}-300x250/js/AdformDHTML.js`)
+  //   );
+  // }
+  // this.fs.copy(
+  //   this.templatePath('src/300x250/js/banner.js'),
+  //   this.destinationPath(`src/${this.props.bannerName}-300x250/js/banner.js`)
+  // );
+  // this.fs.copy(
+  //   this.templatePath(`src/300x250/js/loader.${this.bannerSuffix}.js`),
+  //   this.destinationPath(`src/${this.props.bannerName}-300x250/js/banner.loader.js`)
+  // );
   this.fs.copy(
     this.templatePath('src/300x250/js/animation.js'),
     this.destinationPath(`src/${this.props.bannerName}-300x250/js/banner.animation.js`)
@@ -137,6 +142,15 @@ module.exports = function files() {
   this.fs.copy(
     this.templatePath('_yarn.lock'),
     this.destinationPath('yarn.lock')
+  );
+  // added for anim panel
+  this.fs.copy(
+    this.templatePath('babelrc'),
+    this.destinationPath('.babelrc')
+  );
+  this.fs.copy(
+    this.templatePath('jshintignore'),
+    this.destinationPath('.jshintignore')
   );
 
   // Process the images

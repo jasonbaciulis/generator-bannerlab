@@ -95,22 +95,22 @@ module.exports = function files() {
     this.destinationPath(`src/${this.props.bannerMaster}/js`),
     this.destinationPath(`src/${this.props.bannerName}/js`)
   );
-  this.fs.copy(
-    this.templatePath(`../../app/templates/src/300x250/js/loader.${this.bannerSuffix}.js`),
-    this.destinationPath(`src/${this.props.bannerName}/js/banner.loader.js`)
-  );
+  // this.fs.copy(
+  //   this.templatePath(`../../app/templates/src/300x250/js/loader.${this.bannerSuffix}.js`),
+  //   this.destinationPath(`src/${this.props.bannerName}/js/banner.loader.js`)
+  // );
   if (this.props.bannerType === 'Sizmek') {
     this.fs.copy(
       this.templatePath('../../app/templates/src/300x250/js/libs/EBLoader.js'),
       this.destinationPath(`src/${this.props.bannerName}/js/EBLoader.js`)
     );
   }
-  if (this.props.bannerType === 'Adform') {
-    this.fs.copy(
-      this.templatePath('../../app/templates/src/300x250/js/libs/AdformDHTML.js'),
-      this.destinationPath(`src/${this.props.bannerName}/js/AdformDHTML.js`)
-    );
-  }
+  // if (this.props.bannerType === 'Adform') {
+  //   this.fs.copy(
+  //     this.templatePath('../../app/templates/src/300x250/js/libs/AdformDHTML.js'),
+  //     this.destinationPath(`src/${this.props.bannerName}/js/AdformDHTML.js`)
+  //   );
+  // }
 
   /**
    * Process the images.

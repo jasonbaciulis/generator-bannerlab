@@ -25,6 +25,7 @@
     "EBG": true,
     "dhtml": true,
     "FT": true,
+    "AnimPanel": true,
     "myFT": true,
     "TimelineLite": false,
     "TimelineMax": false,

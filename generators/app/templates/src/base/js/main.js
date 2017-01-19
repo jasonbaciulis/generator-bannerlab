@@ -14,6 +14,7 @@ Preview.prototype._bindSelectors = function() {
   this.down = document.querySelector('.down');
   this.left = document.querySelector('.left');
   this.right = document.querySelector('.right');
+  this.animPanelToggle = document.querySelector('.anim-panel-toggle');
 };
 
 Preview.prototype._bindEvents = function() {
@@ -23,6 +24,7 @@ Preview.prototype._bindEvents = function() {
 
   document.addEventListener('keydown', this._onKeyDown);
   document.addEventListener('keyup', this._onKeyUp);
+  this.animPanelToggle.addEventListener('click', this._animPanel.bind(this));
 
   for (var i = 0; i < this.links.length; i++) {
     this.links[i].addEventListener('click', this._onClick);
@@ -86,8 +88,13 @@ Preview.prototype._onClick = function(e) {
   this.iframe.src = e.target.href;
   TweenLite.set('.iframe iframe', {autoAlpha: 0});
   TweenLite.set('.loading', {display: 'block', autoAlpha: 1});
+  if (this.animPanelToggle.style.display === 'none') {
+    var animPanel = document.querySelector('.anim-panel');
+    document.body.removeChild(animPanel);
+    this.animPanelToggle.style.display = 'block';
+  }
   setTimeout(function() {
-    var banner = _this.iframe.contentWindow.document.querySelector('.banner');
+    var banner = _this.iframe.contentWindow.document.querySelector('#banner');
     if (banner) {
       TweenLite.set('.loading', {autoAlpha: 0});
       TweenLite.to('.iframe iframe', 1, {autoAlpha: 1});
@@ -96,6 +103,24 @@ Preview.prototype._onClick = function(e) {
   }, 1000);
 };
 
+Preview.prototype._animPanel = function(e) {
+  var _this = this;
+  e.preventDefault();
+  var banner = _this.iframe.contentWindow;
+  this.animPanelToggle.style.display = 'none';
+  new AnimPanel(banner.timeline);
+};
+
 document.addEventListener('DOMContentLoaded', function () {
   new Preview();
 });
+
+// window.onload = function() {
+//   var iframe = document.querySelector('iframe');
+//   var banner = iframe.contentWindow.document.querySelector('#banner');
+//     if (banner) {
+//       TweenLite.set('.loading', {autoAlpha: 0});
+//       TweenLite.to('.iframe iframe', 1, {autoAlpha: 1});
+//       TweenLite.set(banner, { margin: '200px auto'});
+//     }
+// }

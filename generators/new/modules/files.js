@@ -87,11 +87,11 @@ module.exports = function files() {
       }
     }
   );
-  this.fs.copyTpl(
-    this.templatePath('../../app/templates/src/300x250/styles/base/preloader.scss'),
-    this.destinationPath(`src/${this.props.bannerName}/styles/base/_preloader.scss`),
-    props
-  );
+  // this.fs.copyTpl(
+  //   this.templatePath('../../app/templates/src/300x250/styles/base/preloader.scss'),
+  //   this.destinationPath(`src/${this.props.bannerName}/styles/base/_preloader.scss`),
+  //   props
+  // );
 
   /**
    * Process the js files.
@@ -102,20 +102,20 @@ module.exports = function files() {
       this.destinationPath(`src/${this.props.bannerName}/js/EBLoader.js`)
     );
   }
-  if (this.props.bannerType === 'Adform') {
-    this.fs.copy(
-      this.templatePath('../../app/templates/src/300x250/js/libs/AdformDHTML.js'),
-      this.destinationPath(`src/${this.props.bannerName}/js/AdformDHTML.js`)
-    );
-  }
-  this.fs.copy(
-    this.templatePath('../../app/templates/src/300x250/js/banner.js'),
-    this.destinationPath(`src/${this.props.bannerName}/js/banner.js`)
-  );
-  this.fs.copy(
-    this.templatePath(`../../app/templates/src/300x250/js/loader.${this.bannerSuffix}.js`),
-    this.destinationPath(`src/${this.props.bannerName}/js/banner.loader.js`)
-  );
+  // if (this.props.bannerType === 'Adform') {
+  //   this.fs.copy(
+  //     this.templatePath('../../app/templates/src/300x250/js/libs/AdformDHTML.js'),
+  //     this.destinationPath(`src/${this.props.bannerName}/js/AdformDHTML.js`)
+  //   );
+  // }
+  // this.fs.copy(
+  //   this.templatePath('../../app/templates/src/300x250/js/banner.js'),
+  //   this.destinationPath(`src/${this.props.bannerName}/js/banner.js`)
+  // );
+  // this.fs.copy(
+  //   this.templatePath(`../../app/templates/src/300x250/js/loader.${this.bannerSuffix}.js`),
+  //   this.destinationPath(`src/${this.props.bannerName}/js/banner.loader.js`)
+  // );
   this.fs.copy(
     this.templatePath('../../app/templates/src/300x250/js/animation.js'),
     this.destinationPath(`src/${this.props.bannerName}/js/banner.animation.js`)

@@ -1,68 +1,54 @@
 'use strict';
 
-/**
- * Run the animation functions.
- */
-Banner.prototype.start = function () {
-  this.banner = document.querySelector('.banner');
+var banner = document.getElementById('banner'),
+    w = banner.offsetWidth,
+    h = banner.offsetHeight,
+    dur = 0.5,
+    times = 1,
+    timeline;
 
-  this.bannerWidth = this.banner.offsetWidth;
-  this.bannerHeight = this.banner.offsetHeight;
-
-  // Image array for preloading
-  this.images = [
-    'images/logo.png'
-  ];
-
-  var _this = this;
-  this.preloadImages(this.images, function () {
-    _this.createElements();
-    _this.setup();
-    _this.hidePreloader();
-    _this.animate();
-    _this.bindEvents();
-  });
+// setup initial element states
+function cssInit() {
+  TweenMax.set('#', {xPercent:-50, yPercent:-50});
+  TweenMax.set('#', {xPercent:-50, yPercent:-50});
+  TweenMax.set('#', {xPercent:-50, yPercent:-50});
+  TweenMax.set('#', {xPercent:-50, yPercent:-50});
 };
+cssInit();
 
-/**
- * Create dom elements.
- */
-Banner.prototype.createElements = function () {
-  this.logo = this.smartObject({
-    backgroundImage: 'images/logo.png',
-    retina: true,
-    parent: this.banner
-  });
-};
+TweenMax.defaultEase = Power2.easeOut;
 
-/**
- * Setup initial element states.
- */
-Banner.prototype.setup = function () {
-  this.logo.center();
-  this.logo.set({ autoAlpha: 0, scale: 0.4 });
-};
+// animation timeline
+function nameFirstTl() {
+  var tl = new TimelineMax()
+  .from(element, 1, {vars, ease: Power3.easeInOut})
+  .to(element, 1, {vars, ease: Power3.easeInOut})
+  return tl;
+}
 
-/**
- * Hide the preloader.
- */
-Banner.prototype.hidePreloader = function () {
-  TweenLite.to('.preloader', 1, { autoAlpha: 0 });
-};
+function nameSecondTl() {
+  var tl = new TimelineMax()
+  .from(element, 1, {vars, ease: Power3.easeInOut})
+  .to(element, 1, {vars, ease: Power3.easeInOut})
+  return tl;
+}
+   
+function masterTl() {
+  timeline = new TimelineMax({repeat:-1})
+  .add( firstTl() )
+  .add( secondTl() )
+  return timeline;
+}
 
-/**
- * Animation timeline.
- */
-Banner.prototype.animate = function () {
-  var _this = this;
+// fire animations after all elements, images finished loading on the page
+window.onload =  masterTl();
 
-  function loop() {
-    _this.timeline.gotoAndPlay('start');
-  }
 
-  this.timeline = new TimelineLite({ onComplete: loop })
-    .addLabel('start', 0)
-    .add(TweenLite.to(this.logo, 2, { autoAlpha: 1, scale: 0.7, delay: 1, ease: Elastic.easeOut }))
-    .add(TweenLite.to(this.logo, 1, { autoAlpha: 0, scale: 0.4, delay: 1 }));
-
-};
+// function to run on complete of timeline to pause animation after x ammount of times
+function stopAnim() {
+    if (times >= 2) {
+      timeline.pause();
+    }
+    times++;
+    console.log("times it ran: " + times);
+}
