@@ -19,14 +19,21 @@ cssInit();
 TweenMax.defaultEase = Power2.easeOut;
 
 // animation timeline
-function nameFirstTl() {
+function firstTl() {
   var tl = new TimelineMax()
   .from(element, 1, {vars, ease: Power3.easeInOut})
   .to(element, 1, {vars, ease: Power3.easeInOut})
   return tl;
 }
 
-function nameSecondTl() {
+function secondTl() {
+  var tl = new TimelineMax()
+  .from(element, 1, {vars, ease: Power3.easeInOut})
+  .to(element, 1, {vars, ease: Power3.easeInOut})
+  return tl;
+}
+
+function thirdTl() {
   var tl = new TimelineMax()
   .from(element, 1, {vars, ease: Power3.easeInOut})
   .to(element, 1, {vars, ease: Power3.easeInOut})
@@ -37,6 +44,7 @@ function masterTl() {
   timeline = new TimelineMax({repeat:-1})
   .add( firstTl() )
   .add( secondTl() )
+  .add( thirdTl() )
   return timeline;
 }
 

@@ -1,17 +1,19 @@
 {
-	"name": "generator-bannertime",
-	"version": "2.2.1",
+	"name": "custom-generator-bannertime",
+	"version": "1.0.0",
 	"description": "Yeoman generator for creating HTML5 advertising campaigns",
-	"homepage": "https://github.com/pyramidium/generator-bannertime",
+	"homepage": "https://github.com/gbaciulis/custom-generator-bannertime",
 	"bugs": "https://github.com/pyramidium/generator-bannertime/issues",
-	"author": "Jay Campbell <jay@pyramidium.co.uk> (https://github.com/pyramidium)",
+	"author": "Gedas Baciulis <gedas@gbaciulis.com> (https://github.com/gbaciulis)",
 	"contributors": [
+		"Jay Campbell <jay@pyramidium.co.uk> (https://github.com/pyramidium)",
 		"Joey Padasian <joeypadasian@oliver.agency> (https://github.com/joemidi)",
-		"Pavel Krymski <pavelkrymski@oliver.agency> (https://github.com/kp-dev)"
+		"Pavel Krymski <pavelkrymski@oliver.agency> (https://github.com/kp-dev)",
+		"One Design Company (https://github.com/onedesign)"
 	],
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/pyramidium/generator-bannertime.git"
+		"url": "git+https://github.com/gbaciulis/custom-generator-bannertime.git"
 	},
 	"license": "MIT",
 	"keywords": [
@@ -21,7 +23,8 @@
 		"ad",
 		"gulp",
 		"scaffold",
-		"framework"
+		"framework",
+		"animpanel"
 	],
 	"scripts": {
 		"deploy": "node ./publish.js",
