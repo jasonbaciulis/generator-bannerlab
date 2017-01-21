@@ -1,4 +1,4 @@
-# Custom Bannertime Generator
+# Bannerlab generator
 
 Custom configuration of [Bannertime generator](https://github.com/pyramidium/generator-bannertime) with [AnimPanel](https://github.com/onedesign/anim-panel) implementation.
 
