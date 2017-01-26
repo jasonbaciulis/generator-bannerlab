@@ -22,7 +22,7 @@ module.exports = function prompts() {
     type: 'input',
     name: 'bannerName',
     message: 'What is the name of the new format? (kebab-case)',
-    default: answer => `${this.appname}-${answer.bannerWidth}x${answer.bannerHeight}`,
+    default: answer => `${answer.bannerWidth}x${answer.bannerHeight}-${this.appname}`,
     filter: answer => slugify(answer)
   }, {
     type: 'list',

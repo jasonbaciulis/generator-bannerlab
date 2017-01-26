@@ -30,7 +30,7 @@ module.exports = function prompts() {
     type: 'input',
     name: 'bannerName',
     message: 'What is the name of the new format?:',
-    default: answer => `${this.appname}-${answer.bannerWidth}x${answer.bannerHeight}`,
+    default: answer => `${answer.bannerWidth}x${answer.bannerHeight}-${this.appname}`,
     filter: answer => answer.replace(/\s+/g, '-')
   }, {
     type: 'list',

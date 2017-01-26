@@ -41,7 +41,7 @@ function thirdTl() {
 }
    
 function masterTl() {
-  timeline = new TimelineMax({repeat:-1})
+  timeline = new TimelineMax()
   .add( firstTl() )
   .add( secondTl() )
   .add( thirdTl() )
@@ -49,7 +49,7 @@ function masterTl() {
 }
 
 // fire animations after all elements, images finished loading on the page
-window.onload =  masterTl();
+window.onload = masterTl();
 
 
 // function to run on complete of timeline to pause animation after x ammount of times

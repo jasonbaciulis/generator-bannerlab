@@ -51,7 +51,7 @@ module.exports = function files() {
   );
   this.fs.copyTpl(
     this.templatePath('src/300x250/_index.html'),
-    this.destinationPath(`src/${this.props.bannerName}-300x250/index.html`),
+    this.destinationPath(`src/300x250-${this.props.bannerName}/index.html`),
     props
   );
 
@@ -63,12 +63,12 @@ module.exports = function files() {
   );
   this.fs.copyTpl(
     this.templatePath('src/300x250/styles/style.scss'),
-    this.destinationPath(`src/${this.props.bannerName}-300x250/styles/style.scss`),
+    this.destinationPath(`src/300x250-${this.props.bannerName}/styles/style.scss`),
     props
   );
   this.fs.copyTpl(
     this.templatePath('src/300x250/styles/base/banner.scss'),
-    this.destinationPath(`src/${this.props.bannerName}-300x250/styles/base/_banner.scss`),
+    this.destinationPath(`src/300x250-${this.props.bannerName}/styles/base/_banner.scss`),
     props
   );
   // this.fs.copyTpl(
@@ -90,7 +90,7 @@ module.exports = function files() {
   if (this.props.bannerType === 'Sizmek') {
     this.fs.copy(
       this.templatePath('src/300x250/js/libs/EBLoader.js'),
-      this.destinationPath(`src/${this.props.bannerName}-300x250/js/EBLoader.js`)
+      this.destinationPath(`src/300x250-${this.props.bannerName}/js/EBLoader.js`)
     );
   }
   // if (this.props.bannerType === 'Adform') {
@@ -109,7 +109,7 @@ module.exports = function files() {
   // );
   this.fs.copy(
     this.templatePath('src/300x250/js/animation.js'),
-    this.destinationPath(`src/${this.props.bannerName}-300x250/js/banner.animation.js`)
+    this.destinationPath(`src/300x250-${this.props.bannerName}/js/banner.animation.js`)
   );
 
   // Retrieve banner properties to create the package.json
@@ -160,7 +160,7 @@ module.exports = function files() {
   );
   this.fs.copy(
     this.templatePath('src/300x250/images'),
-    this.destinationPath(`src/${this.props.bannerName}-300x250/images`)
+    this.destinationPath(`src/300x250-${this.props.bannerName}/images`)
   );
 
   // Process the gulp tasks
@@ -173,14 +173,14 @@ module.exports = function files() {
   if (this.props.bannerType === 'Adform') {
     this.fs.copyTpl(
       this.templatePath('src/300x250/js/_manifest.json'),
-      this.destinationPath(`src/${this.props.bannerName}-300x250/manifest.json`),
+      this.destinationPath(`src/300x250-${this.props.bannerName}/manifest.json`),
       props
     );
   }
   if (this.props.bannerType === 'Flashtalking') {
     this.fs.copyTpl(
       this.templatePath('src/300x250/js/_manifest.flashtalking.js'),
-      this.destinationPath(`src/${this.props.bannerName}-300x250/manifest.js`),
+      this.destinationPath(`src/300x250-${this.props.bannerName}/manifest.js`),
       props
     );
   }
