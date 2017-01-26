@@ -1,8 +1,8 @@
 {
-  "name": "bannerlab-generator",
+  "name": "generator-bannerlab",
   "version": "1.0.1",
   "description": "Yeoman generator for creating HTML5 advertising campaigns (based on pyramidium's bannertime)",
-  "homepage": "https://github.com/gbaciulis/bannerlab-generator",
+  "homepage": "https://github.com/gbaciulis/generator-bannerlab",
   "bugs": "https://github.com/pyramidium/generator-bannertime/issues",
   "author": "Gedas Baciulis <gedas@gbaciulis.com> (https://github.com/gbaciulis)",
   "contributors": [
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gbaciulis/bannerlab-generator.git"
+    "url": "git+https://github.com/gbaciulis/generator-bannerlab.git"
   },
   "license": "MIT",
   "keywords": [
