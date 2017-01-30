@@ -4,12 +4,23 @@
 
 const chalk = require('chalk');
 
+// module.exports = function intro() {
+//   const message =
+//   chalk.blue('\n  _____             _   _') +
+//   chalk.blue('\n |     |___ ___ _ _| |_|_|_____ ___') +
+//   chalk.blue('\n |   --| . | . | | |  _| |     | -_|') +
+//   chalk.blue('\n |_____|___|  _|_  |_| |_|_|_|_|___|') +
+//   chalk.blue('\n           |_| |___|\n');
+//   this.log(message);
+// };
+
+
 module.exports = function intro() {
   const message =
-  chalk.green('\n  _____             _   _') +
-  chalk.green('\n |     |___ ___ _ _| |_|_|_____ ___') +
-  chalk.green('\n |   --| . | . | | |  _| |     | -_|') +
-  chalk.green('\n |_____|___|  _|_  |_| |_|_|_|_|___|') +
-  chalk.green('\n           |_| |___|\n');
+  chalk.blue('\n  _____             _        _') +
+  chalk.blue('\n |     |___ ___ _ _| |   ___| |_') +
+  chalk.blue('\n |   --| . | . | | | |__| . | . |') +
+  chalk.blue('\n |_____|___|  _|_  |____|__,|___|') +
+  chalk.blue('\n           |_| |___|\n');
   this.log(message);
 };
