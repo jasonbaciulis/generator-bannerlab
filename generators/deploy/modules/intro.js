@@ -4,22 +4,12 @@
 
 const chalk = require('chalk');
 
-// module.exports = function intro() {
-//   const message =
-//   chalk.blue('\n  ____          _         _   _') +
-//   chalk.blue('\n |    \\ ___ ___| |___ _ _| |_|_|_____ ___') +
-//   chalk.blue('\n |  |  | -_| . | | . | | |  _| |     | -_|') +
-//   chalk.blue('\n |____/|___|  _|_|___|_  |_| |_|_|_|_|___|') +
-//   chalk.blue('\n           |_|       |___|\n');
-//   this.log(message);
-// };
-
 module.exports = function intro() {
   const message =
-  chalk.blue('\n  ____          _         _        _') +
-  chalk.blue('\n |    \\ ___ __| |___ _ _| |   ___| |_') +
-  chalk.blue('\n |  |  | -_| . | | . | | | |__| . | . |') +
-  chalk.blue('\n |____/|___|  _|_|___|_  |____|__,|___|') +
-  chalk.blue('\n           |_|       |___|\n');
+  chalk.cyan('\n  ____          _         _        _') +
+  chalk.cyan('\n |    \ ___ ___| |___ _ _| |   ___| |_') +
+  chalk.cyan('\n |  |  | -_| . | | . | | | |__| . | . |') +
+  chalk.cyan('\n |____/|___|  _|_|___|_  |____|__,|___|') +
+  chalk.cyan('\n           |_|       |___|\n');
   this.log(message);
 };

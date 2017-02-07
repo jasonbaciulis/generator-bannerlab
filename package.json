@@ -9,7 +9,7 @@
     "Jay Campbell <jay@pyramidium.co.uk> (https://github.com/pyramidium)",
     "Joey Padasian <joeypadasian@oliver.agency> (https://github.com/joemidi)",
     "Pavel Krymski <pavelkrymski@oliver.agency> (https://github.com/kp-dev)",
-    "One Design Company (https://github.com/onedesign)"
+    "Chris Gannon (https://github.com/chrisgannon/)"
   ],
   "repository": {
     "type": "git",
@@ -21,10 +21,10 @@
     "html5",
     "banner",
     "ad",
+    "ScrubGSAPTimeline",
     "gulp",
     "scaffold",
-    "framework",
-    "animpanel"
+    "framework"
   ],
   "scripts": {
     "deploy": "node ./publish.js",

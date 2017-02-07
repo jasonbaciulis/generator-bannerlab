@@ -57,21 +57,6 @@ body {
   }
 }
 
-.anim-panel-toggle {
-  width: auto;
-  height: 20px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-right: 1em;
-  padding: 5px;
-
-  .cog {
-    width: 1.5em;
-    height: 1.5em;
-  }
-}
-
 .keyboard-controls {
   $key-size: 22px;
   $gutter: 2px;

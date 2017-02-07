@@ -12,8 +12,8 @@
         document.write('<script src="'+ (window.API_URL || 'https://s1.adform.net/banners/scripts/rmb/Adform.DHTML.js?bv='+ Math.random()) +'"><\/script>');
     </script><% } %><% if (bannerType == 'DCM') { %>
     <script type="text/javascript">var clickTag = "https://www.google.com";</script><% } %>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
   </head>
   <body>
     <% if (bannerType == 'DCM') { %><a id="clicktag" href="javascript:window.open(window.clickTag)" target="_blank">
