@@ -29,8 +29,14 @@ module.exports = function files() {
     case 'IAB':
       this.bannerSuffix = 'iab';
       break;
+    case 'Adnet':
+      this.bannerSuffix = 'adnet';
+      break;
+    case 'Gemius':
+      this.bannerSuffix = 'gemius';
+      break;
     default:
-      this.bannerSuffix = 'doubleclick';
+      this.bannerSuffix = 'adform';
   }
 
   const props = {
@@ -48,8 +54,7 @@ module.exports = function files() {
 
   this.fs.copy(
     filePath,
-    filePath,
-    {
+    filePath, {
       process: (content) => {
         const regEx = new RegExp('</ul>');
         const newContent = content
@@ -74,8 +79,7 @@ module.exports = function files() {
   );
   this.fs.copy(
     this.destinationPath(`src/${this.props.bannerMaster}/styles/base/_banner.scss`),
-    this.destinationPath(`src/${this.props.bannerName}/styles/base/_banner.scss`),
-    {
+    this.destinationPath(`src/${this.props.bannerName}/styles/base/_banner.scss`), {
       process: (content) => {
         const regExWidth = new RegExp(/\$banner-width:\s*[0-9]*px;/);
         const regExHeight = new RegExp(/\$banner-height:\s*[0-9]*px;/);
@@ -143,8 +147,8 @@ module.exports = function files() {
    */
   if (this.props.includeOfflineScripts === true) {
     new Download({
-      mode: '755'
-    })
+        mode: '755'
+      })
       .get(getVendorScript(this.props.bannerType))
       .dest('offline')
       .run();

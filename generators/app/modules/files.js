@@ -29,8 +29,14 @@ module.exports = function files() {
     case 'IAB':
       this.bannerSuffix = 'iab';
       break;
+    case 'Adnet':
+      this.bannerSuffix = 'adnet';
+      break;
+    case 'Gemius':
+      this.bannerSuffix = 'gemius';
+      break;
     default:
-      this.bannerSuffix = 'doubleclick';
+      this.bannerSuffix = 'adform';
   }
 
   const props = {
@@ -188,8 +194,8 @@ module.exports = function files() {
   // Process the offline vendor scripts
   if (this.props.includeOfflineScripts === true) {
     new Download({
-      mode: '755'
-    })
+        mode: '755'
+      })
       .get(getVendorScript(this.props.bannerType))
       .dest('offline')
       .run();
