@@ -6,7 +6,7 @@ Custom configuration of [Generator Bannertime ](https://github.com/pyramidium/ge
 
 * Added ScrubGSAPTimeline in the preview page allowing you to scrub through a timeline using your mouse to debug and fine-tune your GSAP animations quickly.
 * Custom configuration for HTML, CSS, JS templates.
-* Added support for two new platforms: Adnet, Gemius.
+* Added support for two new platforms: Adnet and Gemius.
 
 ## Getting started
 
