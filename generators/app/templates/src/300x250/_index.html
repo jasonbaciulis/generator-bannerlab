@@ -34,7 +34,7 @@
     <a id="clicktag" href="javascript:window.open(window.clickTag)" target="_blank"><% } %>
     <% if (bannerType === 'Gemius') { %>
     <a id="creativelink" target="_blank"><% } %>
-    <div id="banner">
+    <div id="banner" <% if (bannerType === 'Adnet') { %>onclick="window.bannerClick()"<% } %>>
 
         
         <div id="border"></div>
@@ -77,8 +77,6 @@
         }();
         window.open(getUriParams.clickTAG, "_blank");
     };
-    var banner = document.getElementById('banner');
-    banner.onclick = "window.bannerClick()";
     </script><% } %>
 
     <script src="js/banner.animation.js" type="text/javascript"></script>
