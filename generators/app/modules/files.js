@@ -88,11 +88,6 @@ module.exports = function files() {
     this.templatePath('src/base/js/main.js'),
     this.destinationPath('src/base/js/main.js')
   );
-  // Added anim panel
-  this.fs.copy(
-    this.templatePath('src/base/js/anim_panel.js'),
-    this.destinationPath('src/base/js/anim_panel.js')
-  );
   if (this.props.bannerType === 'Sizmek') {
     this.fs.copy(
       this.templatePath('src/300x250/js/libs/EBLoader.js'),
