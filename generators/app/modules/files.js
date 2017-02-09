@@ -99,12 +99,6 @@ module.exports = function files() {
       this.destinationPath(`src/300x250-${this.props.bannerName}/js/EBLoader.js`)
     );
   }
-  // if (this.props.bannerType === 'Adform') {
-  //   this.fs.copy(
-  //     this.templatePath('src/300x250/js/libs/AdformDHTML.js'),
-  //     this.destinationPath(`src/${this.props.bannerName}-300x250/js/AdformDHTML.js`)
-  //   );
-  // }
   // this.fs.copy(
   //   this.templatePath('src/300x250/js/banner.js'),
   //   this.destinationPath(`src/${this.props.bannerName}-300x250/js/banner.js`)
@@ -148,15 +142,6 @@ module.exports = function files() {
   this.fs.copy(
     this.templatePath('_yarn.lock'),
     this.destinationPath('yarn.lock')
-  );
-  // added for anim panel
-  this.fs.copy(
-    this.templatePath('babelrc'),
-    this.destinationPath('.babelrc')
-  );
-  this.fs.copy(
-    this.templatePath('jshintignore'),
-    this.destinationPath('.jshintignore')
   );
 
   // Process the images
