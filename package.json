@@ -3,7 +3,7 @@
   "version": "1.2.2",
   "description": "Yeoman generator for creating HTML5 advertising campaigns (based on pyramidium's bannertime)",
   "homepage": "https://github.com/gbaciulis/generator-bannerlab",
-  "bugs": "https://github.com/pyramidium/generator-bannertime/issues",
+  "bugs": "https://github.com/gbaciulis/generator-bannerlab/issues",
   "author": "Gedas Baciulis <gedbaciulis@gmail.com> (https://github.com/gbaciulis)",
   "contributors": [
     "Jay Campbell <jay@pyramidium.co.uk> (https://github.com/pyramidium)",
