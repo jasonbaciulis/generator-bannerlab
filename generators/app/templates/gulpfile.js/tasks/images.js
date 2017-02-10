@@ -13,9 +13,9 @@ gulp.task('images', function() {
   return gulp.src(config.tasks.images.src)
     .pipe(plumber({ errorHandler: handleErrors }))
     .pipe(imagemin({
-      use: [pngquant([{
-        quality: '60'
-      }])]
+      use: [pngquant({
+            quality: '65-80'
+        })]
     }))
     .pipe(changed(config.tasks.images.dest))
     .pipe(gulp.dest(config.tasks.images.dest))
