@@ -21,6 +21,7 @@
     "html5",
     "banner",
     "ad",
+    "gsap",
     "ScrubGSAPTimeline",
     "gulp",
     "scaffold",
