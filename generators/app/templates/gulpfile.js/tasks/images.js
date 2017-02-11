@@ -15,8 +15,7 @@ gulp.task('images', function() {
     .pipe(plumber({ errorHandler: handleErrors }))
     // .pipe(gulpPngquant( {quality: '55-65'} ))
     .pipe(imagemin({
-        use: [imageminPngquant() ] }).then( () => {
-          console.log('Images optimized');
+        use: [imageminPngquant()] 
     }))
     .pipe(changed(config.tasks.images.dest))
     .pipe(gulp.dest(config.tasks.images.dest))
