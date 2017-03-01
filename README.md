@@ -1,6 +1,6 @@
 # Generator BannerLab
 
-Custom configuration of [Generator Bannertime ](https://github.com/pyramidium/generator-bannertime) with [ScrubGSAPTimeline](https://github.com/chrisgannon/ScrubGSAPTimeline) implementation.
+Custom configuration of [Generator Bannertime](https://github.com/pyramidium/generator-bannertime) with [ScrubGSAPTimeline](https://github.com/chrisgannon/ScrubGSAPTimeline) implementation.
 
 ## What's changed:
 
