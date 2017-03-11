@@ -11,6 +11,9 @@ module.exports = function files() {
     case 'DoubleClick Studio':
       this.bannerSuffix = 'doubleclick';
       break;
+    case 'AdWords':
+      this.bannerSuffix = 'adwords';
+      break;
     case 'Sizmek':
       this.bannerSuffix = 'sizmek';
       break;
